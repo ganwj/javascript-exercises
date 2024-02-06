@@ -1,12 +1,6 @@
 const sumAll = function (start, end) {
-    if (
-        start < 0 ||
-        end < 0 ||
-        typeof start !== "number" ||
-        typeof end !== "number"
-    ) {
-        return "ERROR";
-    }
+    if (!Number.isInteger(start) || !Number.isInteger(end)) return "ERROR";
+    if (start < 0 || end < 0) return "ERROR";
 
     let sum = 0;
 
